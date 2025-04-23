@@ -16,7 +16,7 @@ namespace CybersecurityAwarenessAssistant
         static void Main(string[] args)
         {
             //Play audio greeting
-            PlayGreetingAudio("Cybersecuritychatbot");
+            PlayGreetingAudio("Cybersecuritychatbot .wav");
 
             //HeaderAscii Art 
             Console.Title = "Cyber-Security Assistant Chatbot";
