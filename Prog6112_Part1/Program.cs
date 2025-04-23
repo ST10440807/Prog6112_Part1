@@ -48,3 +48,35 @@ namespace CybersecurityAwarenessAssistant
            
             
         ");
+            Console.Title = "Cyber-Security Assistant Chatbot";
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("Welcome to the CyberSecurity Assistance Chatbot!");
+            Console.WriteLine("I am here to help you stay safe online what is your name.");//Prompt user name
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            string userName = Console.ReadLine();//Read user input and save username
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine($"Hey {userName}! How can I help you today?");
+            Console.WriteLine("You can ask about security concerns such as password safety,phishing and safe browsing,or type 'exit' to quit.\n");
+
+            while (true)//Loop to keep program running until user says exit 
+            {
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.Write($"{userName}:  ");
+                string userInput = Console.ReadLine()?.ToLower().Trim();//Format user input 
+                //Error handling 
+                if (string.IsNullOrEmpty(userInput))
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Please enter a valid input.");
+                    continue;
+                }
+                //Exit application upon user request
+                if (userInput == "exit")
+                {
+                    Console.ForegroundColor = ConsoleColor.Cyan;
+                    Console.WriteLine("Goodbye! Have a nice day and stay safe online!");
+                    break;
+                }
+                HandleUserQuery(userInput, userName);
+            }
+        }
