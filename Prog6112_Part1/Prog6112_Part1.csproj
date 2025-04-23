@@ -8,6 +8,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Greeting Audio\Cybersecuritychatbot .wav" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Greeting Audio\Cybersecuritychatbot .wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="System.Windows.Extensions" Version="9.0.4" />
   </ItemGroup>
 
